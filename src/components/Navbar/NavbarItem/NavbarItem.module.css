@@ -4,6 +4,8 @@
     display: flex;
     align-items: center;
     padding: 7px 0;
+    text-decoration: none;
+    color: black
 }
 
 .navbarItem:hover {
