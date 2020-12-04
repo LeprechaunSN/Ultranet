@@ -1,0 +1,14 @@
+header {
+    background: #304159;
+    width: 100vw;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: auto;
+}
+
+.logo {
+    height: 40px;
+    margin: auto 0;
+}
