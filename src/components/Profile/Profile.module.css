@@ -1,0 +1,21 @@
+.profileImage img {
+    height: 150px;
+    width: 100%;
+}
+
+.avaAndDescription {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.avatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+.userName {
+    font-size: 25px;
+}
