@@ -1,0 +1,25 @@
+.error {
+    display: flex;
+    align-items: center;
+    color: red;
+}
+
+.error img {
+    height: 25px;
+    margin-right: 10px;
+}
+
+.textarea {
+    outline: none;
+    background: rgb(225, 225, 225);
+    border: 1 px solid red;
+    resize: none;
+    font-size: 14px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.some *{
+    margin: 0;
+}
