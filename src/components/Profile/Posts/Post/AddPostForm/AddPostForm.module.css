@@ -1,0 +1,13 @@
+.post {
+    margin: 15px 0;
+    height: 100px;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+.submitButton {
+    width: 250px;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+}
