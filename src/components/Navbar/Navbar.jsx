@@ -1,15 +1,23 @@
 import React from 'react'
 import s from './Navbar.module.css'
 import NavbarItem from './NavbarItem/NavbarItem'
+import profileIcon from '../../assets/images/icons/profile.png'
+import messagesIcon from '../../assets/images/icons/messages.png'
+import usersIcon from '../../assets/images/icons/users.png'
+import newsIcon from '../../assets/images/icons/news.png'
+import musicIcon from '../../assets/images/icons/music.png'
+import settingsIcon from '../../assets/images/icons/settings.png'
 
 function Navbar() {
     return (
         <nav className={s.nav}>
-            <NavbarItem path="/profile" name="Profile" iconLink="https://img.icons8.com/wired/64/000000/gender-neutral-user--v1.png" />
-            <NavbarItem path="/messages" name="Messages" iconLink="https://img.icons8.com/wired/64/000000/secured-letter.png" />
-            <NavbarItem path="/news" name="News" iconLink="https://img.icons8.com/wired/64/000000/news.png" />
-            <NavbarItem path="/music" name="Music" iconLink="https://img.icons8.com/wired/64/000000/music.png" />
-            <NavbarItem path="/settings" name="Settings" iconLink="https://img.icons8.com/wired/64/000000/settings.png" />
+            <NavbarItem path="/profile" name="Profile" iconLink={profileIcon} />
+            <NavbarItem path="/messages" name="Messages" iconLink={messagesIcon} />
+            <NavbarItem path="/users" name="Users" iconLink={usersIcon} />
+            <NavbarItem path="/news" name="News" iconLink={newsIcon} />
+            <NavbarItem path="/music" name="Music" iconLink={musicIcon} />
+            <hr/>
+            <NavbarItem path="/settings" name="Settings" iconLink={settingsIcon} />
         </nav>
     );
 }
