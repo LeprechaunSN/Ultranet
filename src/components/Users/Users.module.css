@@ -1,0 +1,10 @@
+.users {
+    margin-left: 20px;
+}
+
+.showMoreButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
