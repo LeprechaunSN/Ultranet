@@ -1,0 +1,46 @@
+import React from "react";
+
+class Status extends React.Component {
+    state = {
+        editMode: false,
+        status: this.props.status
+    }
+
+    activateEditMode = () => {
+        this.setState({
+            editMode: true
+        });
+    }
+
+    deactivateEditMode = () => {
+        this.setState({
+            editMode: false
+        });
+        this.props.updateStatus(this.state.status);
+    }
+
+    onChangeStatus = (e) => {
+        this.setState({
+            status: e.target.value
+        });
+    }
+
+    // componentDidUpdate(prevProps, prevState) {
+    //     if(prevProps.status !== this.props.status) {
+    //         this.setState({
+    //             status: this.props.status
+    //         })
+    //     }
+    // }
+
+    render() {
+        return <div>
+            { this.state.editMode 
+                ? <input autoFocus onBlur={this.deactivateEditMode} onChange={this.onChangeStatus} value={this.state.status} /> 
+                : <span onDoubleClick={this.activateEditMode}>{this.state.status || "изменить статус"}</span>
+            }
+        </div>
+    }
+}
+
+export default Status;
