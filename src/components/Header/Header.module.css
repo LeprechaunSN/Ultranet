@@ -1,9 +1,19 @@
 .header {
     background: #304159;
-    width: 100vw;
+    min-width: 100%;
+}
+
+.headerWrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo {
     height: 40px;
     margin: auto 0;
+}
+
+.authInfo {
+    margin: auto 0;
+    float: right;
 }

@@ -1,11 +1,20 @@
-import React from 'react'
-import s from './Header.module.css'
+import React from 'react';
+import s from './Header.module.css';
+import logo from '../../assets/images/logo.png';
+import AuthData from './AuthData';
+import Button from '../common/Button/Button'
+import { NavLink } from 'react-router-dom';
 
-function Header() {
+function Header(props) {
     return (
         <header className={s.header}>
-            <div className="wrapper">
-                <img className={s.logo} alt="Ultranet" src="https://demo.joomlashine.com/joomla-templates/jsn_ultranet/pro//templates/jsn_ultranet/images/logo.png" />
+            <div className={"wrapper " + s.headerWrapper}>
+                <img className={s.logo} alt="Ultranet" src={logo} />
+                <div className={s.authInfo}>
+                    {props.isAuth 
+                    ? <AuthData photo={props.photo} login={props.login} logout={props.logout} /> 
+                    : <NavLink to="/login"><Button text="Login"/></NavLink> }
+                </div>
             </div>
         </header>
     );
