@@ -1,11 +1,11 @@
 import { followAPI, usersAPI } from "../../api/api";
 
-const FOLLOW = 'FOLLOW';
-const UNFOLLOW = 'UNFOLLOW';
-const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
-const SWITCH_TO_NEXT_PAGE = 'SWITCH_TO_NEXT_PAGE';
-const SHOW_USERS_PORTION = 'SHOW_USERS_PORTION';
-const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
+const FOLLOW = 'ultanet/users/FOLLOW';
+const UNFOLLOW = 'ultanet/users/UNFOLLOW';
+const SET_TOTAL_USERS_COUNT = 'ultanet/users/SET_TOTAL_USERS_COUNT';
+const SWITCH_TO_NEXT_PAGE = 'ultanet/users/SWITCH_TO_NEXT_PAGE';
+const SHOW_USERS_PORTION = 'ultanet/users/SHOW_USERS_PORTION';
+const TOGGLE_IS_FETCHING = 'ultanet/users/TOGGLE_IS_FETCHING';
 
 let initialState = {
     users: [],

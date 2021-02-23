@@ -1,7 +1,7 @@
 import { authAPI, profileAPI } from "../../api/api";
 
-const SET_USER_DATA = "SET_USER_DATA";
-const SET_USER_PHOTO = "SET_USER_PHOTO";
+const SET_USER_DATA = "ultanet/auth/SET_USER_DATA";
+const SET_USER_PHOTO = "ultanet/auth/SET_USER_PHOTO";
 
 const initialState = {
     id: null,
@@ -34,6 +34,7 @@ export const setAuthUserData = (payload, isAuth) => ({ type: SET_USER_DATA, payl
 export const setAuthUserPhoto = photo => ({ type: SET_USER_PHOTO, photo })
 
 export const getAuthUser = () => (dispatch) => {
+    
     return authAPI.authMe()
         .then(response => {
             if (response.resultCode === 0) {

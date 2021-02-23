@@ -1,8 +1,8 @@
 import { profileAPI } from "../../api/api";
 
-const ADD_POST = 'ADD_POST';
-const SET_PROFILE = 'SET_PROFILE';
-const SET_STATUS = 'SET_STATUS';
+const ADD_POST = 'ultanet/profile/ADD_POST';
+const SET_PROFILE = 'ultanet/profile/SET_PROFILE';
+const SET_STATUS = 'ultanet/profile/SET_STATUS';
 
 let initialState = {
     posts: [
