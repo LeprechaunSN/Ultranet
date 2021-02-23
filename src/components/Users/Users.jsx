@@ -6,6 +6,7 @@ import s from "./Users.module.css";
 function Users(props) {
 
     const users = props.users.map(u => <User id={u.id} 
+                                             key={u.id}
                                              name={u.name} 
                                              photo={u.photos.small} 
                                              followed={u.followed}
