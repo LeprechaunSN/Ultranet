@@ -53,21 +53,19 @@ export const setStatusAC = (status) => ({
 
 export const addPostCreator = (newPostText) => ({ type: ADD_POST, newPostText });
 
-export const getProfile = (id) => (dispatch) => {
-    profileAPI.getProfileInfo(id)
-        .then(data => {
-            dispatch(setProfileAC(data));
-        });
+export const getProfile = (id) => async (dispatch) => {
+    let data = await profileAPI.getProfileInfo(id);
+    dispatch(setProfileAC(data));
 }
 
-export const getStatus = (id) => (dispatch) => {
-    profileAPI.getStatus(id)
-        .then(data => dispatch(setStatusAC(data)));
+export const getStatus = (id) => async (dispatch) => {
+    let data = await profileAPI.getStatus(id);
+    dispatch(setStatusAC(data));
 }
 
-export const updateStatus = (status) => (dispatch) => {
-    profileAPI.updateStatus(status)
-        .then(data => dispatch(setStatusAC(data)));
+export const updateStatus = (status) => async (dispatch) => {
+    let data = profileAPI.updateStatus(status);
+    dispatch(setStatusAC(data));
 }
 
 export const addPost = (newPostText) => (dispatch) => {

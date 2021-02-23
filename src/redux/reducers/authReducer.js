@@ -34,7 +34,7 @@ export const setAuthUserData = (payload, isAuth) => ({ type: SET_USER_DATA, payl
 export const setAuthUserPhoto = photo => ({ type: SET_USER_PHOTO, photo })
 
 export const getAuthUser = () => (dispatch) => {
-    
+
     return authAPI.authMe()
         .then(response => {
             if (response.resultCode === 0) {
@@ -50,28 +50,24 @@ export const getAuthUser = () => (dispatch) => {
         );
 }
 
-export const login = (email, password, rememberMe) => (dispatch) => {
-    authAPI.login(email, password, rememberMe)
-        .then(response => {
-            if (response.resultCode === 0) {
-                dispatch(getAuthUser());
-            }
-        })
+export const login = (email, password, rememberMe) => async (dispatch) => {
+    let response = await authAPI.login(email, password, rememberMe)
+    if (response.resultCode === 0) {
+        dispatch(getAuthUser());
+    }
 }
 
-export const logout = () => (dispatch) => {
-    authAPI.logout()
-        .then(response => {
-            if (response.resultCode === 0) {
-                dispatch(setAuthUserData({
-                    id: null,
-                    email: null,
-                    login: null,
-                    photo: null,
-                    password: null
-                }, false));
-            }
-        })
+export const logout = () => async (dispatch) => {
+    let response = await authAPI.logout()
+    if (response.resultCode === 0) {
+        dispatch(setAuthUserData({
+            id: null,
+            email: null,
+            login: null,
+            photo: null,
+            password: null
+        }, false));
+    }
 }
 
 export default authReducer;
